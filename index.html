@@ -129,14 +129,13 @@
     @media only screen and (max-device-width: 420px) {
       body {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr) 50px;
-        grid-template-areas: "header" "card1" "card2" "footer" ".";
-        justify-items: center;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "header" "card1" "card2" "footer";
+        justify-items: start;
         align-items: center;
-        justify-content: stretch;
         -webkit-text-size-adjust: none;
         grid-row-gap: 10px;
-        min-height: 95vh;
+        height: 95vh;
       }
 
       header {
