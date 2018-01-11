@@ -129,11 +129,14 @@
     @media only screen and (max-device-width: 420px) {
       body {
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 1fr 1fr 50px;
+        grid-template-rows: repeat(4, 1fr);
         grid-template-areas: "header" "card1" "card2" "footer";
-        justify-content: center;
-        height: 100vh;
+        justify-items: center;
+        align-items: center;
+        justify-content: stretch;
+        min-height: 100vh;
         -webkit-text-size-adjust: none;
+        grid-row-gap: 10px;
       }
 
       header {
@@ -151,13 +154,13 @@
 
       .card {
         width: 95%;
-        height: 30vh;
+        height: 35vh;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         justify-items: center;
       }
       .card h2 {
-        font-size: 48px;
+        font-size: 24px;
         padding: 0 50px;
       }
 
