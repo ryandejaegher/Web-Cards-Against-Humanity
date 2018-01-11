@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
   <title>Web Cards Against Humanity</title>
 
   <style>
@@ -132,11 +133,12 @@
         grid-template-areas: "header" "card1" "card2" "footer";
         justify-content: center;
         height: 100vh;
+        -webkit-text-size-adjust: none;
       }
 
       header {
         grid-area: header;
-        font-size: 11px;
+        font-size: 18px;
         text-align: center;
       }
       #card-1 {
@@ -155,7 +157,7 @@
         justify-items: center;
       }
       .card h2 {
-        font-size: 36px;
+        font-size: 48px;
         padding: 0 50px;
       }
 
@@ -168,6 +170,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
 </head>
 
 <body>
