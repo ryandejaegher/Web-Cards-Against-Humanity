@@ -89,6 +89,21 @@
       cursor: pointer;
     }
 
+    .moveCard {
+      animation: card-animation .7s ease;
+    }
+
+    @keyframes card-animation {
+      from {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0px);
+        opacity: 100%;
+      }
+    }
+
     button {
       grid-column: 1/3;
       font-weight: bold;
@@ -233,15 +248,33 @@
         })
     }
 
+    function animateBlackText() {
+      var blackText = document.getElementById('blackCardText');
+      blackText.classList.remove('moveCard');
+      void blackText.offsetWidth;
+      blackText.classList.add('moveCard');
+    }
+
+    function animateWhiteText() {
+      var whiteText = document.getElementById('whiteCardText');
+      whiteText.classList.remove('moveCard');
+      void whiteText.offsetWidth;
+      whiteText.classList.add('moveCard');
+    }
+
     document.getElementById('card-1').addEventListener("click", function() {
       fetchBlackCard();
+      animateBlackText();
     });
 
     document.getElementById('card-2').addEventListener("click", function() {
       fetchWhiteCard();
+      animateWhiteText();
     });
 
     document.getElementById('cardButton').addEventListener("click", function() {
+      animateBlackText();
+      animateWhiteText();
       fetchWhiteCard();
       fetchBlackCard();
     })
